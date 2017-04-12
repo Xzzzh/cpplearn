@@ -12,7 +12,7 @@ class Point
 {
 //在类内部实现的成员函数， 都是inline函数
 public:
-	explicit//禁用隐式转换
+	//explicit//禁用隐式转换
 //有参构造函数
 	Point(int ix = 0, int iy = 0)
 	{
@@ -86,7 +86,7 @@ int main(void)
 	Point pt4(void);//并非创建一个对象，而是一个声明函数
 	Point pt3;
 	cout << endl;
-	Point pt5 = (Point)1;//隐式转换，通过构造函数进行，一般情况下要禁用
+	Point pt5 = 1;//隐式转换，通过构造函数进行，一般情况下要禁用
 	pt5.print();
 	return 0;
 }
