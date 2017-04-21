@@ -1,0 +1,49 @@
+ ///
+ /// @file    iostream.cc
+ /// @author  lemon(haohb13@gmail.com)
+ /// @date    2017-04-13 11:26:19
+ ///
+ 
+#include <iostream>
+#include <string>
+#include <limits>
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+
+
+void printCin()
+{
+	cout << "badbit = " << cin.bad() << endl;
+	cout << "failbit = " << cin.fail() << endl;
+	cout << "eofbit = " << cin.eof() << endl;
+	cout << "goodbit= " << cin.good() << endl;
+}
+
+int main(void)
+{
+	int num;
+	printCin();
+	while(cin >> num)
+	{
+		cout << "num = " << num << endl;
+	}
+	cout << endl;
+
+	printCin();
+	cin.clear();//重置流的状态,清空缓冲区
+	//cin.ignore(1024, '\n');
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cout << endl;
+	printCin();
+
+	string s;
+	cin >> s;
+
+	cout << "s = " << s << endl;
+
+
+	return 0;
+}
+that's new
