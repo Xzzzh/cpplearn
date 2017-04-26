@@ -35,7 +35,7 @@ void WordStatic::readFile(const string & filename)
 			if (!isalpha(word[0]))
 				continue;
 			_dirc[word] += 1; 
-			cout << word << _dirc[word] << " " <<  endl;
+//			cout << word << _dirc[word] << " " <<  endl;
 		}
 	}
 	ifs.close();
